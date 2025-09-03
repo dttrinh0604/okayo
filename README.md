@@ -17,6 +17,7 @@ Lire un client et ses informations → GET /clients/{id}
 Lister tous les clients → GET /clients
 
     Exemple JSON (POST /clients) :
+    
 {
   "code_client": "CU2203-0005",
   
@@ -33,6 +34,7 @@ Lister tous les clients → GET /clients
   "telephone": "0102030405",
   
   "email": "client@test.fr"
+  
 }
 
 3. Produits
