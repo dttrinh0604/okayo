@@ -133,6 +133,13 @@ def creer_facture(facture: Facture):
     factures_db.append(facture)
     return facture
 
+@app.get("/factures/{facture_id}")
+def lire_facture(facture_id: int):
+    for facture in factures_db:
+        if facture.id == facture_id:
+            return facture
+    raise HTTPException(status_code=404, detail="Facture non trouvée")
+
 @app.get("/factures")
 def lister_factures():
     return factures_db
