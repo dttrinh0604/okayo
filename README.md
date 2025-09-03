@@ -6,10 +6,16 @@ go to "http://127.0.0.1:8000/docs" to see all of APIs
 
 
 Fonctionnalités actuelles de l’API
+
 1. Clients
+
+
 Créer un client → POST /clients
+
 Lire un client et ses informations → GET /clients/{id}
+
 Lister tous les clients → GET /clients
+
     Exemple JSON (POST /clients) :
 {
   "code_client": "CU2203-0005",
@@ -22,7 +28,7 @@ Lister tous les clients → GET /clients
   "email": "client@test.fr"
 }
 
-2. Produits
+3. Produits
 Créer un produit → POST /produits
 Lire un produit et ses informations → GET /produits/{id}
 Lister tous les produits → GET /produits
@@ -34,7 +40,7 @@ Lister tous les produits → GET /produits
   "prix_unitaire_ht": 1500.00
 }
 
-3. Factures
+4. Factures
 Créer une facture → POST /factures
 ⚠️ Il faut que client_id et produit_id existent.
 Les montants (montant_ht, montant_ttc, total_ht, total_tva, total_ttc) sont calculés automatiquement.
