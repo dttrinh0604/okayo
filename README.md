@@ -106,27 +106,50 @@ Lire une facture spécifique → GET /factures/{id}
   
         }
 
+
     Exemple réponse calculée automatiquement :
-{
-  "id": 1,
-  "reference": "2022-0025",
-  "client_id": 1,
-  "date_facturation": "2025-09-02",
-  "date_echeance": "2025-09-10",
-  "conditions_reglement": "Règlement à la livraison",
-  "lignes": [
-    {
-      "produit_id": 1,
-      "designation": "Mon produit A",
-      "prix_unitaire_ht": 1500.0,
-      "quantite": 2,
-      "tva_appliquee": 5.5,
-      "montant_ht": 3000.0,
-      "montant_ttc": 3165.0
-    }
-  ],
-  "total_ht": 3000.0,
-  "total_tva": 165.0,
-  "total_ttc": 3165.0
-}
+    
+        {
+
+          "id": 1,
+  
+          "reference": "2022-0025",
+  
+          "client_id": 1,
+  
+          "date_facturation": "2025-09-02",
+  
+          "date_echeance": "2025-09-10",
+  
+          "conditions_reglement": "Règlement à la livraison",
+  
+          "lignes": [
+  
+            {
+    
+              "produit_id": 1,
+      
+              "designation": "Mon produit A",
+      
+              "prix_unitaire_ht": 1500.0,
+      
+              "quantite": 2,
+      
+              "tva_appliquee": 5.5,
+      
+              "montant_ht": 3000.0,
+      
+              "montant_ttc": 3165.0
+      
+            }
+    
+          ],
+  
+          "total_ht": 3000.0,
+  
+          "total_tva": 165.0,
+  
+          "total_ttc": 3165.0
+  
+        }
 
