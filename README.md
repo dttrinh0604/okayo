@@ -59,30 +59,53 @@ Lister tous les produits → GET /produits
   
         }
 
-5. Factures
+3. Factures
+4. 
 Créer une facture → POST /factures
+
 ⚠️ Il faut que client_id et produit_id existent.
+
 Les montants (montant_ht, montant_ttc, total_ht, total_tva, total_ttc) sont calculés automatiquement.
+
 Lister toutes les factures → GET /factures
+
 Lire une facture spécifique → GET /factures/{id}
 
+
     Exemple JSON (POST /factures) :
-{
-  "reference": "2022-0025",
-  "client_id": 1,
-  "date_facturation": "2025-09-02",
-  "date_echeance": "2025-09-10",
-  "conditions_reglement": "Règlement à la livraison",
-  "lignes": [
-    {
-      "produit_id": 1,
-      "designation": "Mon produit A",
-      "prix_unitaire_ht": 1500.00,
-      "quantite": 2,
-      "tva_appliquee": 5.5
-    }
-  ]
-}
+    
+        {
+        
+          "reference": "2022-0025",
+          
+          "client_id": 1,
+  
+          "date_facturation": "2025-09-02",
+  
+          "date_echeance": "2025-09-10",
+  
+          "conditions_reglement": "Règlement à la livraison",
+  
+          "lignes": [
+  
+            {
+    
+              "produit_id": 1,
+      
+              "designation": "Mon produit A",
+      
+              "prix_unitaire_ht": 1500.00,
+      
+              "quantite": 2,
+      
+              "tva_appliquee": 5.5
+      
+            }
+    
+          ]
+  
+        }
+
     Exemple réponse calculée automatiquement :
 {
   "id": 1,
