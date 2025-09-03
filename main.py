@@ -50,14 +50,14 @@ produits_db: List[Produit] = []
 factures_db: List[Facture] = []
 
 # ---- ROUTES CLIENTS ----
-#ajouter un client
+#Ajouter un client
 @app.post("/clients", response_model=Client)
 def creer_client(client: Client):
     client.id = len(clients_db) + 1
     clients_db.append(client)
     return client
 
-#afficher les informations de client
+#Afficher les informations de client
 @app.get("/clients/{id}", response_model=Client)
 def lire_client(id: int):
     for c in clients_db:
@@ -65,20 +65,20 @@ def lire_client(id: int):
             return c
     raise HTTPException(status_code=404, detail="Client non trouvé")
 
-#afficher tous les clients
+#Afficher tous les clients
 @app.get("/clients", response_model=List[Client])
 def lister_clients():
     return clients_db
 
 # ---- ROUTES PRODUITS ----
-#ajouter un porduit
+#Ajouter un porduit
 @app.post("/produits", response_model=Produit)
 def creer_produit(produit: Produit):
     produit.id = len(produits_db) + 1
     produits_db.append(produit)
     return produit
 
-#afficher les informations de produit 
+#Afficher les informations de produit 
 @app.get("/produits/{id}", response_model=Produit)
 def lire_produit(id: int):
     for p in produits_db:
@@ -86,13 +86,13 @@ def lire_produit(id: int):
             return p
     raise HTTPException(status_code=404, detail="Produit non trouvé")
 
-#afficher tous les produits
+#Afficher tous les produits
 @app.get("/produits", response_model=List[Produit])
 def lister_produits():
     return produits_db
 
 # ---- ROUTES FACTURES ----
-#créer une facture et calcul du prix
+#Créer une facture et calcul du prix
 @app.post("/factures", response_model=Facture)
 def creer_facture(facture: Facture):
     # Vérifier que le client existe
@@ -140,7 +140,7 @@ def creer_facture(facture: Facture):
     factures_db.append(facture)
     return facture
 
-#afficher les informations d'une facture 
+#Afficher les informations d'une facture 
 @app.get("/factures/{facture_id}")
 def lire_facture(facture_id: int):
     for facture in factures_db:
@@ -148,7 +148,7 @@ def lire_facture(facture_id: int):
             return facture
     raise HTTPException(status_code=404, detail="Facture non trouvée")
 
-#afficher toutes les factures
+#Afficher toutes les factures
 @app.get("/factures")
 def lister_factures():
     return factures_db
