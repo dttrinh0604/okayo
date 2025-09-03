@@ -19,12 +19,19 @@ Lister tous les clients → GET /clients
     Exemple JSON (POST /clients) :
 {
   "code_client": "CU2203-0005",
+  
   "nom_client": "Mon Client SAS",
+  
   "adresse": "45 rue du test",
+  
   "ville": "Paris",
+  
   "code_postal": "75016",
+  
   "pays": "France",
+  
   "telephone": "0102030405",
+  
   "email": "client@test.fr"
 }
 
