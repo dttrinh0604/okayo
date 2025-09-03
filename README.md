@@ -37,19 +37,29 @@ Lister tous les clients → GET /clients
   
 }
 
-3. Produits
+2. Produits
+
 Créer un produit → POST /produits
+
 Lire un produit et ses informations → GET /produits/{id}
+
 Lister tous les produits → GET /produits
+
     Exemple JSON (POST /produits) :
+    
 {
+
   "code_produit": "A",
+  
   "nom": "Mon produit A",
+  
   "description": "Service test",
+  
   "prix_unitaire_ht": 1500.00
+  
 }
 
-4. Factures
+5. Factures
 Créer une facture → POST /factures
 ⚠️ Il faut que client_id et produit_id existent.
 Les montants (montant_ht, montant_ttc, total_ht, total_tva, total_ttc) sont calculés automatiquement.
