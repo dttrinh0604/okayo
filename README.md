@@ -35,7 +35,7 @@ Lister tous les clients → GET /clients
   
           "email": "client@test.fr"
   
-}
+        }
 
 2. Produits
 
@@ -47,17 +47,17 @@ Lister tous les produits → GET /produits
 
     Exemple JSON (POST /produits) :
     
-{
+        {
 
-  "code_produit": "A",
+          "code_produit": "A",
   
-  "nom": "Mon produit A",
+          "nom": "Mon produit A",
   
-  "description": "Service test",
+          "description": "Service test",
   
-  "prix_unitaire_ht": 1500.00
+          "prix_unitaire_ht": 1500.00
   
-}
+        }
 
 5. Factures
 Créer une facture → POST /factures
